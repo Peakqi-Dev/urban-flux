@@ -55,7 +55,7 @@ const UI = {
                 this.renderOrders(contentArea);
                 break;
             case 'drivers':
-                pageTitle.textContent = '車手管理';
+                pageTitle.textContent = '夥伴管理';
                 this.renderDrivers(contentArea);
                 break;
             case 'settings':
@@ -76,7 +76,7 @@ const UI = {
         grid.className = 'dashboard-grid';
         grid.innerHTML = `
             ${Render.statCard('今日總單量', summary.totalOrders, '📦')}
-            ${Render.statCard('線上車手', summary.activeDrivers, '🛵')}
+            ${Render.statCard('線上夥伴', summary.activeDrivers, '🛵')}
             ${Render.statCard('完成率', summary.completionRate + '%', '📈')}
             ${Render.statCard('今日營收', '$' + summary.revenue, '💰')}
         `;
@@ -139,7 +139,7 @@ const UI = {
             { key: 'createdAt', label: '建立時間', render: row => new Date(row.createdAt).toLocaleTimeString() },
             { key: 'pickup', label: '取件地', render: row => row.pickup.address },
             { key: 'dropoff', label: '送件地', render: row => row.dropoff.address },
-            { key: 'driverId', label: '車手', render: row => row.driverId || '-' },
+            { key: 'driverId', label: '夥伴', render: row => row.driverId || '-' },
             { key: 'status', label: '狀態', render: row => Render.badge(row.status) },
             { key: 'price', label: '金額', render: row => '$' + row.price }
         ], orders)}
@@ -150,7 +150,7 @@ const UI = {
         const drivers = Data.getDrivers();
         container.innerHTML = `
             ${Render.table([
-            { key: 'id', label: '車手編號' },
+            { key: 'id', label: '夥伴編號' },
             { key: 'name', label: '姓名' },
             { key: 'vehicle', label: '車種' },
             { key: 'status', label: '狀態', render: row => Render.badge(row.status) },
@@ -214,9 +214,9 @@ const UI = {
             
             ${order.status === 'PENDING' ? `
                 <div style="margin-top: 20px; padding: 12px; background: #f0f7ff; border-radius: 8px;">
-                    <p style="margin-bottom: 8px; font-weight: 500;">推薦車手</p>
+                    <p style="margin-bottom: 8px; font-weight: 500;">推薦夥伴</p>
                     <select id="driver-select" style="width: 100%; padding: 8px;">
-                        <option value="">請選擇車手...</option>
+                        <option value="">請選擇夥伴...</option>
                         ${Data.getDrivers()
                     .filter(d => d.status === 'IDLE')
                     .map(d => `<option value="${d.id}">${d.name} (${d.vehicle}) - 距離 2km</option>`)
@@ -236,7 +236,7 @@ const UI = {
                     this.closeModal();
                     this.renderPage(this.currentPage); // Refresh
                 } else {
-                    alert('請選擇一位車手');
+                    alert('請選擇一位夥伴');
                 }
             };
         } else {
