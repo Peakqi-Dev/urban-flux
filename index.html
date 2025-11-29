@@ -60,9 +60,125 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 UrbanFlux Technology. All rights reserved.</p>
-    </footer>
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="section-title">
+            <h2>全方位解決方案</h2>
+            <p>無論您的業務規模如何，UrbanFlux 都能提供最適合的支援</p>
+        </div>
+        <div class="solution-container">
+            <div class="solution-item">
+                <div class="solution-content">
+                    <h3>電商零售</h3>
+                    <p>解決最後一哩路的配送難題。透過我們的 API 串接，顧客下單後立即自動派遣，實現當日甚至小時達的極速體驗。</p>
+                    <ul class="check-list">
+                        <li>自動化訂單匯入</li>
+                        <li>即時貨態追蹤連結</li>
+                        <li>降低 30% 物流成本</li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <div class="mock-ui-card">📦 訂單 #2093 已送達</div>
+                </div>
+            </div>
+            <div class="solution-item reverse">
+                <div class="solution-content">
+                    <h3>餐飲外送</h3>
+                    <p>專為高時效性需求設計。我們的熱點預測演算法能提前調度車手至需求熱區，確保餐點熱騰騰送達顧客手中。</p>
+                    <ul class="check-list">
+                        <li>智慧熱區預測</li>
+                        <li>多點取餐路徑優化</li>
+                        <li>平均配送時間 < 25 分鐘</li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <div class="mock-ui-card">🍔 預計 15 分鐘抵達</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="section-title">
+            <h2>透明靈活的價格方案</h2>
+            <p>無隱藏費用，隨時可升級或取消</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="plan-name">新創版</div>
+                <div class="price">$0 <span class="period">/月</span></div>
+                <p class="plan-desc">適合剛起步的小型團隊</p>
+                <ul class="features-list">
+                    <li>每月 100 筆訂單</li>
+                    <li>基礎地圖派遣</li>
+                    <li>1 位管理員帳號</li>
+                    <li>Email 支援</li>
+                </ul>
+                <a href="dashboard.html" class="btn-outline full-width">開始使用</a>
+            </div>
+            <div class="pricing-card popular">
+                <div class="popular-tag">最受歡迎</div>
+                <div class="plan-name">專業版</div>
+                <div class="price">$1,999 <span class="period">/月</span></div>
+                <p class="plan-desc">適合快速成長的企業</p>
+                <ul class="features-list">
+                    <li>每月 5,000 筆訂單</li>
+                    <li>進階路徑優化演算法</li>
+                    <li>5 位管理員帳號</li>
+                    <li>優先客服支援</li>
+                    <li>API 串接權限</li>
+                </ul>
+                <a href="dashboard.html" class="btn-primary full-width">免費試用 14 天</a>
+            </div>
+            <div class="pricing-card">
+                <div class="plan-name">企業版</div>
+                <div class="price">客製化</div>
+                <p class="plan-desc">適合大規模跨國營運</p>
+                <ul class="features-list">
+                    <li>無限訂單量</li>
+                    <li>專屬伺服器部署</li>
+                    <li>無限管理員帳號</li>
+                    <li>24/7 專屬顧問</li>
+                    <li>客製化功能開發</li>
+                </ul>
+                <a href="#contact" class="btn-outline full-width">聯繫我們</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>準備好升級您的物流效率了嗎？</h2>
+                <p>立即聯繫我們的專家團隊，為您量身打造最適合的導入計畫。</p>
+                <div class="info-item">
+                    <span class="icon">📧</span>
+                    <span>sales@urbanflux.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <span>台北市信義區信義路五段7號 (台北101)</span>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('感謝您的訊息！我們會盡快與您聯繫。');">
+                <div class="form-group">
+                    <label>姓名</label>
+                    <input type="text" placeholder="您的姓名" required>
+                </div>
+                <div class="form-group">
+                    <label>公司Email</label>
+                    <input type="email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>訊息內容</label>
+                    <textarea rows="4" placeholder="請簡述您的需求..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">送出訊息</button>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
